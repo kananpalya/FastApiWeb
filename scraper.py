@@ -398,7 +398,7 @@ def scrape_walmart_product(url):
         json_data = json.loads(next_data_script.string)
         print("Parsed JSON data")
 
-        # Navigate JSON structure to product info - adjust here if JSON structure changes
+        # Navigate JSON structure 
         product_data = json_data['props']['pageProps']['initialData']['data']['product']
         print(f"Product data extracted: {product_data.get('name', 'N/A')}")
 
@@ -429,9 +429,9 @@ def scrape_walmart_product(url):
         return None
 
 
-# Testing block (aap jab chahe tab run kar sakte hain, ya hata bhi sakte hain)
+# Testing block
 if __name__ == '__main__':
-    # Example product URL, aap apna URL de sakte hain
+    # Example 
     test_url = "https://www.walmart.com/ip/Logitech-MX-Master-3S-Wireless-Performance-Mouse-Ergo-8K-DPI-Quiet-Clicks-USB-C-Black/731473988"
     product = scrape_walmart_product(test_url)
     if product:
